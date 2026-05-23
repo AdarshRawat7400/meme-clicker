@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meme Clicker</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="game" aria-label="Meme Clicker game">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Meme Clicker</p>
+          <h1>Tap for another bad idea</h1>
+        </div>
+        <div class="stats">
+          <div class="score">
+            <span id="score">0</span>
+            <small>clicks</small>
+          </div>
+          <div class="score score-small">
+            <span id="combo">0</span>
+            <small>combo</small>
+          </div>
+        </div>
+      </header>
+
+      <div class="controls">
+        <div class="field">
+          <label for="genre">Genre</label>
+          <select id="genre" aria-label="Meme genre">
+            <option value="tech">Tech</option>
+            <option value="movies">Movies</option>
+            <option value="games">Games</option>
+            <option value="office">Office</option>
+            <option value="school">School</option>
+            <option value="sports">Sports</option>
+            <option value="food">Food</option>
+            <option value="travel">Travel</option>
+            <option value="family">Family</option>
+            <option value="random">Random</option>
+          </select>
+        </div>
+        <button id="shuffle" type="button">Shuffle</button>
+      </div>
+
+      <button id="memeButton" class="meme-card" type="button">
+        <span class="meme-visual" aria-hidden="true">
+          <img id="gifMedia" class="gif-media" alt="">
+          <span id="memeFace" class="meme-face">LOL</span>
+          <span id="memeBadge" class="meme-badge">local build</span>
+        </span>
+        <span class="meme-copy" aria-live="polite">
+          <span id="genreTag" class="tag">TECH</span>
+          <span id="memeTitle" class="meme-title">Deploy Friday</span>
+          <span id="memeText" class="meme-text">It worked locally, so obviously production is being dramatic.</span>
+          <span class="hint">Click the meme for the next one</span>
+        </span>
+      </button>
+
+      <div class="footer">
+        <span id="streak">Current streak: 0</span>
+        <span id="status">10 genres loaded</span>
+      </div>
+    </section>
+  </main>
+  <script src="/script.js?v=4"></script>
+</body>
+</html>
